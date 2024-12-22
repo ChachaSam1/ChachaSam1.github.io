@@ -7,6 +7,16 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- Navigation Menu -->
+<nav class="navbar">
+  <ul>
+    <li><a href="#about-me">About Me</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#interests">Interests</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
   <header>
     <div class="navbar">
       <h1>Hi, I'm <span>Chacha</span></h1>
@@ -40,5 +50,18 @@
     <p>Fun Fact: I live by the mantra, ‘Data without context is just noise.’</p>
     <p>Nairobi, Kenya</p>
   </footer>
+<script>
+  document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
 </body>
 </html>
