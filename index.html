@@ -7,14 +7,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="navbar">
-  <div class="menu-icon" onclick="toggleMenu()">☰</div>
-  <ul class="menu-links" id="menuLinks">
-    <li><a href="#about-me">About Me</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#interests">Interests</a></li>
-  </ul>
+<div class="menu-container">
+  <div class="menu-icon" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="menu-items" id="menuItems">
+    <a href="#about">About Me</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#interests">Interests</a>
+    <div class="close-icon" onclick="toggleMenu()">×</div>
+  </div>
 </div>
   <header>
     <div class="navbar">
@@ -49,11 +54,9 @@
     <p>Fun Fact: I live by the mantra, ‘Data without context is just noise.’</p>
     <p>Nairobi, Kenya</p>
   </footer>
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById("menuLinks");
-    menu.classList.toggle("show");
-  }
-</script>
+function toggleMenu() {
+  const menu = document.getElementById("menuItems");
+  menu.classList.toggle("active");
+}
 </body>
 </html>
