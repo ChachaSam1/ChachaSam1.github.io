@@ -7,15 +7,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- Navigation Menu -->
-<nav class="navbar">
-  <ul>
+<div class="navbar">
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <ul class="menu-links" id="menuLinks">
     <li><a href="#about-me">About Me</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#interests">Interests</a></li>
   </ul>
-</nav>
+</div>
   <header>
     <div class="navbar">
       <h1>Hi, I'm <span>Chacha</span></h1>
@@ -50,17 +50,10 @@
     <p>Nairobi, Kenya</p>
   </footer>
 <script>
-  document.querySelectorAll('.navbar a').forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
-      window.scrollTo({
-        top: targetElement.offsetTop,
-        behavior: 'smooth'
-      });
-    });
-  });
+  function toggleMenu() {
+    const menu = document.getElementById("menuLinks");
+    menu.classList.toggle("show");
+  }
 </script>
 </body>
 </html>
