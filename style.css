@@ -109,15 +109,14 @@ footer a {
 .menu-items {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 20px;
-  gap: 15px; /* Adds spacing between menu items */
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 20px 0;
 }
 
 .menu-items a {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Adds spacing between icon and text */
+  margin: 15px 0; /* Space between each menu item */
 }
 
 .menu-items a:hover {
@@ -126,4 +125,26 @@ footer a {
 
 .menu-items a i {
   font-size: 1.5rem; /* Icon size */
-} 
+}
+
+.menu-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Space between icons */
+  margin-top: auto;
+  padding-bottom: 10px;
+}
+
+.menu-footer a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.menu-footer p {
+  text-align: center;
+  color: #fff;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
